@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(CSSBG1.jpg);
+    background-image: url(CSSBG2.jpg);
     font-family: 'Source Code Pro', monospace;
     color: whitesmoke;
     height: auto 100vh;
@@ -56,7 +56,7 @@ header {
 
 .menu a:hover {
     background-color: #111111;
-    color: teal;
+    color: #008888;
     transition: background-color 1s,color 1s;
 }
 
@@ -70,17 +70,23 @@ a:hover {
     text-decoration: underline;
 }
 
-.titulo {
-    padding: 10vh;
-    transform: scale(0.5) translateY(10vh);
-    opacity: 0;
-    animation: linear 0.5s animTitulo forwards;
+.site-title {
+    padding: 2em;
+    animation: linear 0.5s animTitulo infinite;
 }
 
 @keyframes animTitulo {
+    0% {
+        font-family: 'Abril Fatface', cursive;
+    }
+    33% {
+        font-family: 'Indie Flower', cursive;
+    }
+    66% {
+        font-family: 'Dancing Script', cursive;
+    }
     100% {
-        transform: scale(1.25) translateY(0);
-        opacity: 1;
+        font-family: 'Abril Fatface', cursive;
     }
 }
 
@@ -91,12 +97,13 @@ a:hover {
 
 .site-title {
     font-size: 4em;
-    font-family: 'Kalam', cursive;
+    line-height: 1em;
 }
+
 
 .site-subtitle {
     font-family: 'Press Start 2P', cursive;
-    line-height: 1em;
+    line-height: 2em;
     text-align: center;
 }
 
@@ -138,9 +145,16 @@ a:hover {
     }
 }
 
-.portfolio figure {
+.portfolio figure,
+.portfolio figcaption {
     text-align: center;
 }
+
+.portfolio figcaption {
+    color: #00eeee;
+    padding: 2em;
+}
+
 
 .img-portfolio {
     width: 180px;
